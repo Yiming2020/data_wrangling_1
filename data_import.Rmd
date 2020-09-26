@@ -17,3 +17,22 @@ litters_df = janitor::clean_names(litters_df) #use janitor package里面的clean
 
 
 ## Take a look at the data
+
+Printing in the console.
+
+```{r}
+litters_df
+```
+
+```{r}
+tail(litters_df) #check the tail of your dataset
+```
+
+```{r}
+skimr::skim(litters_df) #skim mean, sd, Q1234, histogram look like
+```
+
+```{r}
+
+```
+
