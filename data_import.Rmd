@@ -76,3 +76,10 @@ litters_base # going to print the entire data set, more difficult to read
 litters_readr
 ```
 
+## Exporting data
+
+Export the mlb sub-table
+```{r}
+write_csv(mlb_df, "./data/mlb_subtanle.csv")
+```
+
