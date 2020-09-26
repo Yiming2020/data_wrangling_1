@@ -50,7 +50,29 @@ litters_df = read_csv("./data/FAS_litters.csv")
 Rread in an excel file
 ```{r}
 library(readxl)
-mlb_df = read_excel("./data/mlb11.xlsx")
+mlb_df = read_excel("./data/mlb11.xlsx", range = "A1:F7")
 mlb_df
+```
+
+Read in a SAS file.
+```{r}
+library(haven)
+pulse_df =  read_sas("./data/public_pulse_data.sas7bdat")
+pulse_df
+pulse_df = janitor::clean_names(pulse_df)
+pulse_df
+```
+
+## Comparison with Base R
+
+what about `read.csv`...? 
+Answer: never use read.csv
+
+```{r}
+litters_base = read.csv("./data/FAS_litters.csv")
+litters_readr = read_csv("./data/FAS_litters.csv")
+
+litters_base # going to print the entire data set, more difficult to read
+litters_readr
 ```
 
