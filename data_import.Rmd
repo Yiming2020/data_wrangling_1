@@ -46,3 +46,11 @@ litters_df = read_csv("./data/FAS_litters.csv", skip = 10, na = c("", "NA", ".",
 litters_df = read_csv("./data/FAS_litters.csv")
 ```
 
+## Other file formats
+Rread in an excel file
+```{r}
+library(readxl)
+mlb_df = read_excel("./data/mlb11.xlsx")
+mlb_df
+```
+
