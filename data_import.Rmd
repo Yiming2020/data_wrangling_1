@@ -32,7 +32,17 @@ tail(litters_df) #check the tail of your dataset
 skimr::skim(litters_df) #skim mean, sd, Q1234, histogram look like
 ```
 
-```{r}
 
+## options to read_csv
+
+check out `?read_csv()` for more information
+```{r}
+litters_df = read_csv("./data/FAS_litters.csv", skip = 10, col_names = FALSE)
+
+```
+
+```{r}
+litters_df = read_csv("./data/FAS_litters.csv", skip = 10, na = c("", "NA", ".", 999))
+litters_df = read_csv("./data/FAS_litters.csv")
 ```
 
