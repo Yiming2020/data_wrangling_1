@@ -93,5 +93,11 @@ mutate(
 #增加一列想要的相关数据 ,modify an existing variable
 ```
 
+# ` arrange`
+
+```{r}
+arrange(litters_df, pups_born_alive) #以pups_born_alive column in order,排列表格
+arrange(litters_df, pups_born_alive, gd0_weight) #先以pups_born_alive，如果内容相同则以gd0_weight排序
+```
 
 
