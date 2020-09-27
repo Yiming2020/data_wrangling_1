@@ -82,3 +82,16 @@ filter(litters_df, group == "Mod8")
 filter(litters_df, group %in% c("Con7", "Mod8")) # `%in%` function means: where the group is in either of these two options
 ```
 
+
+## `mutate`
+
+```{r}
+mutate(
+  litters_df, 
+  wt_gaint = gd18_weight - gd0_weight,
+  group = str_to_lower(group)) #（`str_to_lower` function:convert a string into lowercase)
+#增加一列想要的相关数据 ,modify an existing variable
+```
+
+
+
