@@ -50,7 +50,35 @@ relocate(litters_df,litter_number)#relocate ` litter_number `column as the first
 ```
 
 
+## `filter` function, choose rows
 
+```{r}
+filter(litters_df, gd0_weight < 22)
+```
 
+```{r}
+filter(litters_df, gd0_weight >= 22)
+```
 
+```{r}
+filter(litters_df, gd_of_birth == 20) # ask a question : whether birth is equal to 20. `==` is a test for equality. pick up all rows that answer is true
+```
+
+```{r}
+filter(litters_df, !(gd_of_birth == 20))
+filter(litters_df, gd_of_birth != 20)
+#  ask a question : whether birth is equal to 20. `==` is a test for equality. pick up all rows that answer is false
+```
+
+```{r}
+filter(litters_df, gd0_weight >=22, gd_of_birth == 20)
+```
+
+```{r}
+filter(litters_df, group == "Mod8")
+```
+
+```{r}
+filter(litters_df, group %in% c("Con7", "Mod8")) # `%in%` function means: where the group is in either of these two options
+```
 
